@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources  xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Caddisfly</string>
+
+    <string name="menu_viewmap">View Map</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- Bluetooth -->
+    <string name="start_test">Start Test</string>
+    <string name="not_connected">You are not connected to a device</string>
+    <string name="bt_not_enabled">Bluetooth was not enabled.</string>
+    <string name="title_connecting">connecting...</string>
+    <string name="title_connected_to">connected to<xliff:g id="device_name">%1$s</xliff:g></string>
+    <string name="title_not_connected">not connected</string>
+
+    <string name="source_type">Source Type</string>
+    <string name="select">Select Source Type</string>
+    <string-array name="source_types">
+        <item>Handpump</item>
+        <item>Tubewell</item>
+        <item>River / Stream</item>
+        <item>Open Well</item>
+        <item>Domestic Tap</item>
+        <item>Reservoir / Pond / Lake</item>
+        <item>Industrial</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="test_type">Test Type</string>
+    <string-array name="test_types">
+        <item>Fluoride</item>
+        <item>Nitrate</item>
+        <item>Turbidity</item>
+        <item>Arsenic</item>
+        <item>E.coli</item>
+    </string-array>
+
+    <string name="place">Place</string>
+    <string name="send">Send</string>
+    <string name="edit">Edit</string>
+    <string name="connect">Connect</string>
+    <string name="waiting">Waiting</string>
+    <string name="unit">ppm</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="title_activity_send">Send</string>
+
+    <string name="album_name">Caddisfly</string>
+    <string name="cannot">Cannot</string>
+</resources>

@@ -1,0 +1,369 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="vertical"
+             android:background="@drawable/bg"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             tools:context=".Caddisfly"
+        >
+
+    <LinearLayout
+            android:id="@+id/topcontainer"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_width="320dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            >
+
+        <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000"/>
+
+        <LinearLayout
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:id="@+id/container1"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:baselineAligned="false"
+                android:layout_gravity="center_horizontal"
+                >
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingTop="0dp"
+                    android:baselineAligned="false"
+                    android:layout_gravity="center_horizontal">
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/testType"
+                        android:text="Fluoride"
+                        android:textAllCaps="true"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="#ddd"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_weight="2"/>
+
+                <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/result"
+                        android:layout_gravity="center"
+                        android:textSize="78sp"
+                        android:textColor="#ddd"
+                        android:text="22.05"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="-5dp"
+                        android:paddingLeft="38dp"
+                        android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/details">
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/testDate"
+                    android:text="10 March 2013, 10:30 AM"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#b3b3b3"
+                    android:textSize="20sp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1"/>
+
+            <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="4dip"
+                    android:background="#2d2b2e"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/testDetails"
+                    android:text="River / Lake / Pond, Nagalapura, Bangalore"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#eee"
+                    android:textSize="20sp"
+                    android:paddingBottom="5dp"
+                    android:lineSpacingExtra="4dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:id="@+id/container2"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:baselineAligned="false"
+                android:layout_gravity="center_horizontal"
+                >
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#010101">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="1">
+                        <Button
+                                android:id="@+id/photoButton"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PHOTO"
+                                android:clickable="true"
+                                android:onClick="onPhoto"
+                                android:enabled="true"
+                                style="@style/ButtonAppTheme"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:alpha="1"
+                                android:textColor="#b2b2b2"/>
+                        <Button
+                                android:id="@+id/deleteButton"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="DELETE"
+                                android:clickable="true"
+                                android:onClick="onReset"
+                                android:enabled="true"
+                                style="@style/ButtonAppTheme"
+                                android:textSize="18dp"
+                                android:layout_weight="1"
+                                android:textColor="#b2b2b2"
+                                />
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_height="fill_parent"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="1">
+                        <Button
+                                android:id="@+id/button_send"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="SEND"
+                                android:clickable="true"
+                                android:onClick="onSend"
+                                android:enabled="true"
+                                style="@style/ButtonAppTheme"
+                                android:textSize="20dp"
+                                android:layout_gravity="right"
+                                android:layout_weight="1"
+                                android:textColor="#b2b2b2"/>
+                        <Button
+                                android:id="@+id/button_edit"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="EDIT"
+                                android:clickable="true"
+                                android:onClick="onEdit"
+                                android:enabled="true"
+                                style="@style/ButtonAppTheme"
+                                android:textSize="20dp"
+                                android:layout_weight="1"
+                                android:textColor="#b2b2b2"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/startHelp"
+                >
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="TO START"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#ddd"
+                    android:textSize="20sp"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold"/>
+
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm that Caddisfly Tester unit has completed the test and is ready to send the result."
+                    android:textColor="#ddd"
+                    android:textSize="20sp"
+                    android:paddingBottom="15dp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginLeft="14dp"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click the START button below to receive the result."
+                    android:textColor="#ddd"
+                    android:textSize="20sp"
+                    android:paddingBottom="3dp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginLeft="14dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/resumeHelp"
+                >
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="RESULT NOT MAPPED"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="#ddd"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold"/>
+
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A Previous test result has not been sent to Caddisfly Maps."
+                    android:textColor="#ddd"
+                    android:textSize="20sp"
+                    android:paddingBottom="15dp"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="gone"
+                    android:layout_marginLeft="14dp"/>
+
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click on VIEW to contine..."
+                    android:visibility="gone"
+                    android:textColor="#ddd"
+                    android:textSize="20sp"
+                    android:paddingBottom="3dp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginLeft="14dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+        <Button
+                android:layout_width="155dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="START"
+                android:layout_marginTop="100dp"
+                android:id="@+id/startButton"
+                android:layout_gravity="center"
+                style="@style/ButtonAppTheme"
+                android:padding="20dp"
+                android:textColor="#eee"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/progress"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#37819f"
+                android:paddingTop="20dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="20dp"
+                android:minWidth="190dp"
+                android:alpha="0.9">
+
+            <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connecting..."
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible"></TextView>
+
+            <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="visible">
+            </ProgressBar>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <WebView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/webView"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+</FrameLayout>
